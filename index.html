@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Independence Day Quiz — 14 August</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" id="app">
+    <header class="hero">
+      <div class="hero-inner">
+        <h1>14 August Independence Day Quiz</h1>
+        <p class="subtitle">Test your knowledge — celebrate the spirit! </p>
+      </div>
+      <div class="flag-decor" aria-hidden="true"></div>
+    </header>
+
+    <section class="card" id="quiz-card" aria-live="polite">
+      <div class="top-row">
+        <div class="progress-wrap" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div class="meta">
+          <span id="qIndex">1</span>/<span id="qTotal">5</span>
+          <span class="score">Score: <strong id="score">0</strong></span>
+        </div>
+      </div>
+
+      <div class="question-area">
+        <div id="timer" class="timer" hidden>
+          <span id="timeLeft">15</span>s
+        </div>
+
+        <h2 id="question" class="question">Loading question...</h2>
+
+        <ul id="options" class="options" role="listbox" tabindex="0"></ul>
+      </div>
+
+      <div class="actions">
+        <button id="nextBtn" class="btn primary" disabled>Next</button>
+        <button id="skipBtn" class="btn ghost">Skip</button>
+      </div>
+    </section>
+<div class="result-container hidden" id="result-card" aria-hidden="true">
+  <div class="result-card">
+    <h2 id="resultTitle">You did it!</h2>
+    <p id="resultText">Your final score is <strong id="finalScore">0</strong> / <strong id="finalTotal">5</strong></p>
+    <div class="buttons">
+      <button class="btn primary" id="restartBtn">Play Again</button>
+      <button class="btn ghost" id="shareBtn">Share Score</button>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer">
+      <small>Made with ❤️ — Customize questions in <code>script.js</code></small>
+    </footer>
+
+    <!-- Confetti canvas -->
+    <canvas id="confetti"></canvas>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
